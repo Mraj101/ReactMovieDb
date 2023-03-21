@@ -1,17 +1,18 @@
 import React from "react";
 
-import {Wrapper,Content,LogoImg,TMDBLogoImg} from "./Header.style";
+import {Wrapper,Content,LogoImg,TMDBLogoImg} from './Header.styles'
 
-import RMDBLogo from '../../images/react-movie-logo.svg';
-import TMDBLogo from '../../images/no_image.jpg';
+import RMDBLogo from '../../images/react-movie-logo.svg'
+import TMDBLogo from '../../images/tmdb_logo.svg';
 
-const Header=()=>{
+const Header=()=>(
     <Wrapper>
         <Content>
             <LogoImg src={RMDBLogo} alt='rmdb-logo'/>
             <TMDBLogoImg src={TMDBLogo} alt="tmdb-logo"/>
         </Content>
     </Wrapper>
-}
+)
 
-export default Header;
+export default Header;  
+
