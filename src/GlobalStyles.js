@@ -13,7 +13,7 @@ export const GlobalStyle=createGlobalStyle`
 
     *{
         box-sizing:border-box;
-        font-family:sans-serif,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family:'Abel',sans-serif;
     }
 
     body{
