@@ -1,38 +1,19 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from "react";
 
-import API from '../API'
+
+//hooks
+import { useHomeFetch } from "../Hooks/useHomeFetch";
 //configaration
-import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from "../config"
+import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL } from "../config";
 
 //image
-import NoImage from "../images/no_image.jpg"
+import NoImage from "../images/no_image.jpg";
 
 const Home = () => {
-    const [ state, setState ]=useState();
-    const [loading,setLoading]=useState(false);
-    const [error,setError]=useState(false);
+  const {state,loading,error}=useHomeFetch();
+  
+  console.log(state)
+  return <div>Home page</div>;
+};
 
-    const fetchMovies=async (page,searchTerm = '')=>{
-      try{
-        setError(false);
-        setLoading(true);
-        const movies=await API.fetchMovies(searchTerm,page);
-        console.log(movies)
-
-      }
-      catch(error){
-        setError(true)
-      }
-    };
-
-//initial render
-    useEffect(()=>{
-      fetchMovies(1)
-      },[])
-
-  return (
-    <div>Home page</div>
-  )
-}
-
-export default Home
+export default Home;
