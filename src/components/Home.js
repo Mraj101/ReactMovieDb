@@ -13,7 +13,9 @@ const Home = () => {
   const {state,loading,error}=useHomeFetch();
   
   console.log(state)
-  return <div>Home page</div>;
+  return (<>
+      
+  </>)
 };
 
 export default Home;
