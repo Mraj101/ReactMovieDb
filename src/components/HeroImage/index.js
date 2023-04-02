@@ -1,9 +1,17 @@
 import React from 'react'
 
-const index = () => {
-  return (
-    <div>index</div>
+import { Wrapper,Content,Text,Heading } from './HeroImage.styles'
+
+const HeroImage=({image,title,text})=>{
+  return(
+  <Wrapper>
+    <Content>
+      <Text>
+        <h1>{title}</h1>
+        <p>{text}</p>
+      </Text>
+    </Content>
+  </Wrapper>
   )
 }
-
-export default index
+export default HeroImage
