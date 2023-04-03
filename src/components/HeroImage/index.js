@@ -1,10 +1,7 @@
-import React from 'react'
+import { Wrapper,Content,Text } from "./HeroImage.styles";
 
-import { Wrapper,Content,Text,Heading } from './HeroImage.styles'
-
-const HeroImage=({image,title,text})=>{
-  return(
-  <Wrapper>
+const HeroImage = ({ image, title, text }) => (
+  <Wrapper image={image}>
     <Content>
       <Text>
         <h1>{title}</h1>
@@ -12,6 +9,6 @@ const HeroImage=({image,title,text})=>{
       </Text>
     </Content>
   </Wrapper>
-  )
-}
-export default HeroImage
+);
+
+export default HeroImage;
