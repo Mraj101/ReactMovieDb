@@ -11,12 +11,16 @@ import HeroImage from "./HeroImage";
 
 const Home = () => {
   const { state, loading, error } = useHomeFetch();
-  console.log(state);
+  if(state.results.length>0)
+  console.log(state.results);
+  console.log("ste")
+  console.log("ste")
+
   return (
     <>
     
       {
-      state.results[0]?(
+      state.results.length>0 && state.results[0].backdrop_path?(
         <HeroImage
           image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[0].backdrop_path}`}
           title={state.results[0].original_title}
