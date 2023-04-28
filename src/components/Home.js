@@ -11,10 +11,11 @@ import HeroImage from "./HeroImage";
 import Grid from "./Grid";
 import Thumb from "./Thumb"
 import Spinner from "./Spinner";
+import SearchBar from "./SearchBar";
 
 
 const Home = () => {
-  const { state, loading, error } = useHomeFetch();
+  const { state, loading, error,setSearchTerm } = useHomeFetch();
   return (
     <>
       {
@@ -26,6 +27,7 @@ const Home = () => {
         />
       ) : null
       }
+      <SearchBar setSearchTerm={setSearchTerm}/>
       <Grid header='Popular Movies'>
         {state.results.map((movie)=>
         <Thumb
