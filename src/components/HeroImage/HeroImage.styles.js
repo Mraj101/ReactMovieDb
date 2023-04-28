@@ -25,10 +25,8 @@ export const Content=styled.div`
     padding: 20px;
     max-width: var(--maxWidth);
     margin: 0 auto;
-    border: 10px solid yellow;
 `;
 export const Text=styled.div`
-border: 10px solid red;
     z-index: 100;
     max-width: 700px;
     position: absolute;

@@ -9,6 +9,7 @@ export const GlobalStyle=createGlobalStyle`
         --white:#fff;
         --medGrey:#eee;
         --darkGrey:#1c1c1c;
+        --lightGrey:#D3D3D3;
         --headerHeight: 12vh;
         --footerHeight: 12vh;
     }

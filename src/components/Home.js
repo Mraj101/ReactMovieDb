@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 //hooks
 import { useHomeFetch } from "../Hooks/useHomeFetch";
@@ -10,6 +10,8 @@ import NoImage from "../images/no_image.jpg";
 import HeroImage from "./HeroImage";
 import Grid from "./Grid";
 import Thumb from "./Thumb"
+import Spinner from "./Spinner";
+
 
 const Home = () => {
   const { state, loading, error } = useHomeFetch();
@@ -38,6 +40,7 @@ const Home = () => {
         )}
 
       </Grid>
+      <Spinner/>
     </>
   );
 };
