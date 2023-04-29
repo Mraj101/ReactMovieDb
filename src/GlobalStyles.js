@@ -7,7 +7,7 @@ export const GlobalStyle=createGlobalStyle`
         --fontBig:1.5rem;
         --fontMed:1.2rem;
         --white:#fff;
-        --medGrey:#eee;
+        --medGrey:#b4b4b4;
         --darkGrey:#1c1c1c;
         --lightGrey:#D3D3D3;
         --headerHeight: 12vh;
