@@ -15,11 +15,11 @@ import SearchBar from "./SearchBar";
 
 
 const Home = () => {
-  const { state, loading, error,setSearchTerm } = useHomeFetch();
+  const { state, loading, error,setSearchTerm,searchTerm } = useHomeFetch();
   return (
     <>
       {
-      state.results.length>0 && state.results[0].backdrop_path?(
+       !searchTerm && state.results.length>0 && state.results[0].backdrop_path?(
         <HeroImage
           image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[0].backdrop_path}`}
           title={state.results[0].original_title}
@@ -28,7 +28,7 @@ const Home = () => {
       ) : null
       }
       <SearchBar setSearchTerm={setSearchTerm}/>
-      <Grid header='Popular Movies'>
+      <Grid header={searchTerm? 'Search results' : 'Popular Movies'}>
         {state.results.map((movie)=>
         <Thumb
         key={movie.id}
